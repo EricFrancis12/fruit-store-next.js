@@ -23,8 +23,8 @@ const useCart = create((set, get) => ({
     },
     addItemToCart: (params) => {
         const { newItem } = params;
-        const newCart = [...state.cart, newItem];
         set(state => {
+            const newCart = [...state.cart, newItem];
             return {
                 ...state,
                 cart: newCart
@@ -33,8 +33,8 @@ const useCart = create((set, get) => ({
     },
     removeItemFromCart: (params) => {
         const { itemIndex } = params;
-        const newCart = state.cart.filter((element, index) => itemIndex !== index);
         set(state => {
+            const newCart = state.cart.filter((element, index) => itemIndex !== index);
             return {
                 ...state,
                 cart: newCart

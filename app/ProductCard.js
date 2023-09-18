@@ -10,7 +10,6 @@ export default function ProductCard(props) {
     const { name, description } = productInfo;
 
     const { setProduct } = useCart();
-    
     const router = useRouter();
 
     function onproductClick() {
